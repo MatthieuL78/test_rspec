@@ -1,24 +1,38 @@
-# README
+# Test with Rspec
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ce projet a pour but de faire des tests de vérification sur un projet rails. Je n'ai réussi qu'à faire la première partie (vérification des models).
 
-Things you may want to cover:
+## ATTENTION
+Je me suis rendu compte trop tard qu'il fallait utiliser les 'minitests' ... J'ai utilisé la gem rspec à la place.
 
-* Ruby version
+## Gem du projet
+* gem rspec
+* gem guard-rspec (Pour automatiser le lancement des tests)
+* gem factory_bot_rails (Pour créer des utilisateurs, etc.)
+* gem database_cleaner (Pour nettoyer la base de donnée)
 
-* System dependencies
+## Presentation du projet
+* Inscription, connexion et deconnexion
+* Un utilisateur peut s'inscrire, se connecter et se déconnecter
 
-* Configuration
+## Lancer les tests
+Pour lancer les tests, sur le terminal (dans le dossier concerne) :
+```
+bundle install --without production
+```
 
-* Database creation
+```
+rails db:migrate
+```
 
-* Database initialization
+```
+bundle exec rspec spec/models/user_spec.rb
+```
 
-* How to run the test suite
+Vous observez les résultats dans le terminal.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Les tests rspec
+On trouve les tests dans les fichiers suivants :
+* spec/models/user_spec.rb
+La génération d'utilisateur est dans le fichier :
+* spec/factories/users.rb
