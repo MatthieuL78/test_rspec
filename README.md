@@ -2,6 +2,8 @@
 
 Ce projet a pour but de faire des tests de vérification sur un projet rails. Je n'ai réussi qu'à faire la première partie (vérification des models).
 
+* Heroku : https://murmuring-headland-50960.herokuapp.com/
+
 ## ATTENTION
 Je me suis rendu compte trop tard qu'il fallait utiliser les 'minitests' ... J'ai utilisé la gem rspec à la place.
 
